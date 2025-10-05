@@ -4,7 +4,9 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ```
-choco install eza fzf ripgrep fd bat zoxide -y
+choco install eza fzf ripgrep fd bat zoxide awk -y
+Install-Module -Name PSFzf
+Install-Module -Name PSFzfHistory
 notepad $PROFILE
 ```
 
@@ -28,6 +30,11 @@ zoxide init powershell | Out-String | Invoke-Expression
 
 # fzf setting
 $env:FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
+Import-Module PSFzf
+Import-Module PSFzfHistory
+Set-PSReadLineKeyHandler -Chord Ctrl+r -ScriptBlock { 
+    Invoke-FzfPsReadlineHandlerHistory
+}
 
 
 # alias
