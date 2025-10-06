@@ -4,7 +4,7 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ```
-choco install eza fzf ripgrep fd bat zoxide awk -y
+choco install eza fzf ripgrep fd bat zoxide awk neovim yazi sed -y
 Install-Module -Name PSFzf
 Install-Module -Name PSFzfHistory
 notepad $PROFILE
