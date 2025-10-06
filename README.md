@@ -14,9 +14,7 @@ notepad $PROFILE
 
 PROFILE SETTING
 ```
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme iterm2
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\iterm2.omp.json" | Invoke-Expression
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
 # Be aware that if you are missing these lines from your profile, tab completion
