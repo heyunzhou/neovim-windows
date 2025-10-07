@@ -50,4 +50,9 @@ require("lazy").setup({
       },
     },
   },
+  -- custom setting disable LuaRocks
+  rocks = {
+    enabled = false,
+    hererocks = false,
+  },
 })
