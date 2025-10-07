@@ -6,7 +6,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ```
 # install powershell 7
 https://github.com/PowerShell/PowerShell/releases
-choco install eza fzf ripgrep fd bat zoxide awk neovim yazi sed -y
+choco install eza fzf ripgrep fd bat zoxide awk neovim yazi sed lazygit -y
 Install-Module -Name PSFzf
 Install-Module -Name PSFzfHistory
 notepad $PROFILE
