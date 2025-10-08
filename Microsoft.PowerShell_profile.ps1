@@ -6,19 +6,24 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\iterm2.omp.json" | Invoke-E
 # See https://ch0.co/tab-completion for details.
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+  Register-EngineEvent PowerShell.OnIdle -Action {
+    Import-Module "$ChocolateyProfile"
+  } | Out-Null
 }
+
 
 # enable zoxide
 zoxide init powershell | Out-String | Invoke-Expression
 
 # fzf setting
-$env:FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
-Import-Module PSFzf
-Import-Module PSFzfHistory
-Set-PSReadLineKeyHandler -Chord Ctrl+r -ScriptBlock { 
+Register-EngineEvent PowerShell.OnIdle -Action {
+  $env:FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
+  Import-Module PSFzf
+  Import-Module PSFzfHistory
+  Set-PSReadLineKeyHandler -Chord Ctrl+r -ScriptBlock { 
     Invoke-FzfPsReadlineHandlerHistory
-}
+  }
+} | Out-Null
 
 
 # alias
@@ -27,3 +32,4 @@ Set-Alias vim nvim
 function zf {
     z $(fd -t d . | fzf)
 }
+
