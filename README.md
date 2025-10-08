@@ -21,7 +21,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## instal cli tools
 ```
-choco install eza fzf ripgrep fd bat zoxide awk neovim yazi sed lazygit -y
+choco install starship eza fzf ripgrep fd bat zoxide awk neovim yazi sed lazygit -y
 Install-Module -Name PSFzf
 Install-Module -Name PSFzfHistory
 ```
