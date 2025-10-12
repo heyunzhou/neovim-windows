@@ -32,6 +32,8 @@ Register-EngineEvent PowerShell.OnIdle -Action {
 Set-Alias vim nvim
 
 function zf {
-    z $(fd -t d . | fzf)
+  $dir = fd -t d . | fzf
+  if ($dir) { z $dir }
 }
+
 
