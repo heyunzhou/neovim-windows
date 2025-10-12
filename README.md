@@ -27,11 +27,11 @@ Install-Module -Name PSFzfHistory
 ```
 ## set pwsh profile
 ```
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$env:LOCALAPPDATA\nvim\Microsoft.PowerShell_profile.ps1"
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$env:LOCALAPPDATA\nvim\dotfiles\Microsoft.PowerShell_profile.ps1"
 ```
 # set starship 
 ```
-New-Item -ItemType SymbolicLink -Path "$HOME\.config\starship.toml" -Target "$env:LOCALAPPDATA\nvim\starship.toml"
+New-Item -ItemType SymbolicLink -Path "$HOME\.config\starship.toml" -Target "$env:LOCALAPPDATA\nvim\dotfiles\starship.toml"
 ```
 
 
