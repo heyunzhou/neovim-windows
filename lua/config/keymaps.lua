@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "                         -- Set local leader key (NEW)
 
 
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 -- window management
 keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
@@ -39,10 +40,9 @@ keymap.set({"n", "v"}, "L", "$")
 keymap.set({"i"}, "jj", "<ESC>")
 
 -- Move lines up and down like in IDEs (Alt + j / Alt + k)
-local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<A-Down>", ":m .+1<CR>==", opts)
-vim.keymap.set("n", "<A-UP>", ":m .-2<CR>==", opts)
-vim.keymap.set("i", "<A-Down>", "<Esc>:m .+1<CR>==gi", opts)
-vim.keymap.set("i", "<A-UP>", "<Esc>:m .-2<CR>==gi", opts)
-vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", opts)
-vim.keymap.set("v", "<A-UP>", ":m '<-2<CR>gv=gv", opts)
+keymap.set("n", "<A-Down>", ":m .+1<CR>==", opts)
+keymap.set("n", "<A-UP>", ":m .-2<CR>==", opts)
+keymap.set("i", "<A-Down>", "<Esc>:m .+1<CR>==gi", opts)
+keymap.set("i", "<A-UP>", "<Esc>:m .-2<CR>==gi", opts)
+keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", opts)
+keymap.set("v", "<A-UP>", ":m '<-2<CR>gv=gv", opts)
