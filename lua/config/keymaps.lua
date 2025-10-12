@@ -38,6 +38,9 @@ keymap.set({"n", "v"}, "L", "$")
 
 -- other
 keymap.set({"i"}, "jj", "<ESC>")
+keymap.set({"n"}, "<C-a>", "ggVG", opts)
+keymap.set({"v","i"}, "<C-a>", "<Esc>ggVG", opts)
+
 
 -- Move lines up and down like in IDEs (Alt + j / Alt + k)
 keymap.set("n", "<A-Down>", ":m .+1<CR>==", opts)
