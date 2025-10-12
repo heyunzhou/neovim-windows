@@ -33,6 +33,11 @@ New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Mic
 ```
 New-Item -ItemType SymbolicLink -Path "$HOME\.config\starship.toml" -Target "$env:LOCALAPPDATA\nvim\dotfiles\starship.toml"
 ```
+# set yazi
+```
+ya pkg add 956MB/vscode-dark-plus
+New-Item -ItemType SymbolicLink -Path "$env:APPDATA\yazi\config\theme.toml" -Target "$env:LOCALAPPDATA\nvim\dotfiles\yazi\theme.toml"
+```
 
 
 

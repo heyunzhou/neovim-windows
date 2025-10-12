@@ -17,6 +17,9 @@ if (Test-Path($ChocolateyProfile)) {
 # enable zoxide
 zoxide init powershell | Out-String | Invoke-Expression
 
+# enable yazi file preview
+$env:YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
+
 # fzf setting
 Register-EngineEvent PowerShell.OnIdle -Action {
   $env:FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
@@ -30,6 +33,8 @@ Register-EngineEvent PowerShell.OnIdle -Action {
 
 # alias
 Set-Alias vim nvim
+
+
 
 function zf {
   $dir = fd -t d . | fzf
