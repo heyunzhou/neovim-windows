@@ -38,6 +38,11 @@ New-Item -ItemType SymbolicLink -Path "$HOME\.config\starship.toml" -Target "$en
 ya pkg add 956MB/vscode-dark-plus
 New-Item -ItemType SymbolicLink -Path "$env:APPDATA\yazi\config\theme.toml" -Target "$env:LOCALAPPDATA\nvim\dotfiles\yazi\theme.toml"
 ```
+# set vscode
+```
+New-Item -ItemType SymbolicLink -Path "$env:APPDATA\Code\User\keybindings.json" -Target "$env:LOCALAPPDATA\nvim\dotfiles\vscode\keybindings.json"
+New-Item -ItemType SymbolicLink -Path "$env:APPDATA\Code\User\settings.json" -Target "$env:LOCALAPPDATA\nvim\dotfiles\vscode\settings.json"
+```
 
 
 
