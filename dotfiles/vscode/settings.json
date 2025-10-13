@@ -1,0 +1,32 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "editor.suggestSelection": "first",
+  "editor.fontSize": 15,
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#1d5507"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.colorTheme": "Default Dark+"
+}

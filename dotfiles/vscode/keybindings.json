@@ -1,0 +1,36 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+f",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "alt+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  // 代码提示时,按esc不退出normal模式
+  {
+    "key": "escape",
+    "command": "vscode-neovim.escape",
+    "when": "editorTextFocus && neovim.init && neovim.mode != 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'&& !parameterHintsVisible && !suggestWidgetVisible && !inlineSuggestionVisible"
+  },
+  {
+    "key": "escape",
+    "command": "-vscode-neovim.escape",
+    "when": "editorTextFocus && neovim.init && neovim.mode != 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  }
+]
