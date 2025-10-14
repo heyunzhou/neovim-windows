@@ -4,8 +4,7 @@
     "javascript": "html"
   },
   "editor.suggestSelection": "first",
-  "editor.fontSize": 15,
-  "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+  "editor.fontSize": 16,
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.inlineSuggest.edits.showCollapsed": true,
@@ -28,5 +27,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "Default Dark+"
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font"
 }
