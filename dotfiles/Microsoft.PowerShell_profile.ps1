@@ -33,6 +33,7 @@ Register-EngineEvent PowerShell.OnIdle -Action {
 
 # alias
 Set-Alias vim nvim
+Set-Alias lg lazygit
 
 
 
