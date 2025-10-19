@@ -16,9 +16,22 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font",
+  // Neovim extension settings
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "Default Dark+",
-  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font"
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    }
+  }
 }
