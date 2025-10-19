@@ -12,6 +12,17 @@
     "key": "ctrl+shift+w",
     "command": "-workbench.action.closeWindow"
   },
+  // 文件资源管理器快捷键
+  {
+    "key": "space e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "neovim.mode !== insert && !filesExplorerFocus && editorTextFocus"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.closeSidebar",
+    "when": "neovim.mode !== insert && filesExplorerFocus"
+  },
   {
     "key": "ctrl+n",
     "command": "explorer.newFile",
