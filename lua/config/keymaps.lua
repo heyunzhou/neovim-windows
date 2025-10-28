@@ -18,7 +18,7 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- remap vcdy
-local motions = {"w", "b", "B", "(", "{", "t", "\"", "'"}
+local motions = {"p", "w", "b", "B", "(", "{", "t", "\"", "'"}
 for i, v in ipairs(motions) do
   keymap.set("n", "v"..v, "vi"..v)
   keymap.set("n", "c"..v, "ci"..v)
