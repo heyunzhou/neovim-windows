@@ -21,10 +21,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## instal cli tools
 ```
-choco install starship eza fzf ripgrep fd bat zoxide awk neovim yazi sed lazygit -y
+choco install starship eza fzf ripgrep fd bat zoxide awk neovim yazi sed lazygit mingw -y
 Install-Module -Name PSFzf
 Install-Module -Name PSFzfHistory
 ```
+# set treesitter c parser(add to env path)
+```
+C:\ProgramData\mingw64\mingw64\bin
+```
+
 ## set pwsh profile
 ```
 New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$env:LOCALAPPDATA\nvim\dotfiles\Microsoft.PowerShell_profile.ps1"
